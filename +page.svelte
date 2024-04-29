@@ -100,8 +100,9 @@
   }
 
   canvas {
-    border: 1px solid #000;
+    border: 3px solid #000;
     cursor: crosshair;
+    max-width: 100%; /* Ensure canvas does not overflow on small screens */
   }
 
   label {
@@ -115,8 +116,8 @@
 </style>
 
 <main>
-  <h1>create the day...</h1>
-  <canvas id="canvas" width="800" height="600" style="margin: 20px;" on:mousedown="{handleMouseDown}" on:mouseup="{handleMouseUp}" on:mousemove="{handleMouseMove}" on:touchstart="{handleMouseDown}" on:touchend="{handleMouseUp}" on:touchmove="{handleMouseMove}"></canvas>
+  <h1>Create Your Day</h1>
+  <canvas id="canvas" width="500" height="500" style="margin: 20px;" on:mousedown="{handleMouseDown}" on:mouseup="{handleMouseUp}" on:mousemove="{handleMouseMove}" on:touchstart="{handleMouseDown}" on:touchend="{handleMouseUp}" on:touchmove="{handleMouseMove}"></canvas>
   <div>
     <label for="colorPicker">Color:</label>
     <input type="color" id="colorPicker" value="#000000">
@@ -134,5 +135,6 @@
     <input type="color" id="titleColorPicker" value="#000000">
     <button on:click="{clearTitle}" style="margin-left: 10px;">Clear Title</button>
   </div>
-  <footer> <img src="https://api.iconify.design/logos:svelte.svg?color=%234d22b3" alt="Svelte Icon" style="width: 24px; height: 24px; margin-left: 10px;">Art by sudo-self</footer>
+  <footer>html Art by sudo-self</footer>
 </main>
+
