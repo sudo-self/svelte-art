@@ -82,10 +82,10 @@
 
   function shareCanvas() {
     const canvas = document.getElementById('canvas');
-    const dataUrl = canvas.toDataURL(); // Convert canvas to data URL
+    const dataUrl = canvas.toDataURL();
     const link = document.createElement('a');
     link.href = dataUrl;
-    link.download = 'svelteart.png'; // Set the default file name for download
+    link.download = 'svelteart.png'; 
     link.click();
   }
 </script>
@@ -116,7 +116,7 @@
 
 <main>
   <h1>create the day...</h1>
-  <canvas id="canvas" width="800" height="600" style="margin: 20px;" on:mousedown="{handleMouseDown}" on:mouseup="{handleMouseUp}" on:mousemove="{handleMouseMove}" on:touchstart="{handleMouseDown}" on:touchend="{handleMouseUp}" on:touchmove="{handleMouseMove}"></canvas>
+  <canvas id="canvas" width="400" height="500" style="margin: 20px;" on:mousedown="{handleMouseDown}" on:mouseup="{handleMouseUp}" on:mousemove="{handleMouseMove}" on:touchstart="{handleMouseDown}" on:touchend="{handleMouseUp}" on:touchmove="{handleMouseMove}"></canvas>
   <div>
     <label for="colorPicker">Color:</label>
     <input type="color" id="colorPicker" value="#000000">
