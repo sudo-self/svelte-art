@@ -8,6 +8,7 @@
     drawing = true;
     lastX = event.offsetX || event.touches[0].clientX;
     lastY = event.offsetY || event.touches[0].clientY;
+    event.preventDefault(); // Prevent default behavior
   }
 
   function handleMouseUp() {
@@ -42,6 +43,7 @@
 
     lastX = mouseX;
     lastY = mouseY;
+    event.preventDefault(); // Prevent default behavior
   }
 
   function clearCanvas() {
@@ -97,6 +99,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    overflow: hidden; /* Disable scrolling */
   }
 
   canvas {
